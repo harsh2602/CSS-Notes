@@ -1,8 +1,7 @@
-## Module 1
-
+## Buil-in Delcarations and Inheritance
 The browser has default css settings. e.g. in Chrome 86 [user-stylesheet](https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/core/html/resources/html.css)
 
-```
+```css
 a {
   color: -webkit-link;
   cursor: pointer;
@@ -10,7 +9,8 @@ a {
 }
 ```
 
-#### Inheritance
+
+## Inheritance
 
 Certain CSS properties inherit for example: `color`. Certain do not e.g. `border`.
 
@@ -18,27 +18,25 @@ Certain CSS properties inherit for example: `color`. Certain do not e.g. `border
 
 Even for inhertiable properties it is possible to override it by using `inherit` value on the property.
 
-```
-HTML
-
+```html
 <p style="color: red;">
   This is a red paragraph with <a href="#">another link</a>.
 </p>
 
-CSS
-
+<style>
 a {
   color: inherit
 }
+</style>
 ```
 
 Above inherits the color from the parent i.e. `red`.
 
-#### The Cascade
+## The Cascade
 
 It means that if we declare the value for a property and then override it later in the stylesheet, the last property takes effect.
 
-```
+```html
 <style>
   p {
     font-weight: bold;
@@ -55,12 +53,12 @@ It means that if we declare the value for a property and then override it later 
 
 color for `Hello World` is `violet`.
 
-#### Directions
+## Directions
 
 1. Block: top to bottom
 2. Inline: Left to right(english language type)
 
-```
+```css
 p {
   display: block;
   margin-block-start: 1em; // top
@@ -70,11 +68,11 @@ p {
 }
 ```
 
-#### The Box Model
+## The Box Model
 
 By default browser is `content-box` which can be overridden by:
 
-```
+```css
 box-sizing: border-box;
 ```
 
@@ -89,12 +87,11 @@ Units can be in px, rem, em
 px - for padding, margin & border
 rem - font-size
 
-### Border
+## Border
 
 Valid border has to have atleast the border-style. If we don't specify a border color, it'll use the font's color by default.
 
-```
-
+```css
 .good {
   /* 🙆‍♀️ Will produce a black, 3px-thick border */
   border: solid;
@@ -106,7 +103,7 @@ Valid border has to have atleast the border-style. If we don't specify a border 
 
 The core difference is that outline doesn't affect layout. Outline is kinda more like box-shadow; it's a cosmetic effect draped over an element, without nudging it around, or changing its size.
 
-#### Margin
+## Margin
 
 Margin increases the space around an element, giving it some breathing room.
 
@@ -116,7 +113,7 @@ Margin increases the space around an element, giving it some breathing room.
 
 The auto value seeks to fill the maximum available space.
 
-```
+```css
 margin: auto
 ```
 
